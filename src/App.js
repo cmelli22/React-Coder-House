@@ -1,11 +1,15 @@
-import NavBar from "./components/NavBar"
+import Header from "./components/Header"
+import ItemListContainer from "./components/ItemListContainer"
 
 const App = () => {    
     return ( 
             <>
                 <header>
-                    <NavBar/>
+                    <Header/>
                 </header>
+                <div>
+                    <ItemListContainer/>
+                </div>
             </>
         )
 }

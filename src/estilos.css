@@ -2,10 +2,52 @@ body {
     background-color:gray;
 }
 
-.nav-wrapper{
+.nav-bar{
     background-color:blue;
+    box-shadow:none;
 }
 
 .brand-logo{
     margin-left: 5px;
+    width:max-content;
 }
+
+.main-header {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand img {
+    height: 60px;
+    margin-right: 16px;
+}
+
+
+.brand a {
+    color : black;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.cart{
+margin-left: 10px;
+}
+
+.material-icons{
+    line-height:inherit;
+    font-size: 30px;
+}
+
+
+.right{
+    margin-right: 10px;
+}
+ 
