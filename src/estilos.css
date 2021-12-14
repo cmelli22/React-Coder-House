@@ -50,4 +50,8 @@ margin-left: 10px;
 .right{
     margin-right: 10px;
 }
- 
+
+.contador{
+    display:flex;
+    align-items: center;
+}
