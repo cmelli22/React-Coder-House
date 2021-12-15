@@ -16,6 +16,11 @@ const ItemCount = ({stock , initial, onAdd }) =>{
         setCount(count - 1)    
     }
 
+    const agregarItem = () => {
+        console.log("agrego item")
+        onAdd(count)
+    }
+
     return (
         <>
             <div className = "contador">
@@ -24,7 +29,7 @@ const ItemCount = ({stock , initial, onAdd }) =>{
                 <button className="buttonCounter" onClick={sumar}>+</button>
             </div>
             <div>
-                <button onClick={onAdd(count)}>Agregar</button>
+                <button onClick={agregarItem}>Agregar</button>
             </div>
         </>
     )

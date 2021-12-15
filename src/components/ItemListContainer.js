@@ -3,6 +3,7 @@ import ItemCount from "./Item/ItemCount"
 const ItemListContainer = ({greeting}) => {
     
     let [item, setItem] = useState(0)
+   
     const onAdd = (cantidad) =>{
         console.log("ONADD")
         setItem(cantidad)
