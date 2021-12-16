@@ -52,6 +52,41 @@ margin-left: 10px;
 }
 
 .contador{
-    display:flex;
-    align-items: center;
+    display:flex !important;
+    align-items: center !important;
+    margin-right: 10px;
+    justify-content: center;
 }
+
+.cardItem{
+    margin: 25px;
+    background-color: blanchedalmond;
+    width: 300px;
+}
+
+.item{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    background-color: cadetblue;
+    color : white;
+    text-decoration: none;
+    justify-content:left;
+}
+
+.item p{
+    margin: 1%;
+}
+
+.item img {
+    height: 50px;
+    margin-right: 16px;
+}
+
+.itemCount{
+    color: white;
+}
+.buttonCounter{
+   margin-inline: 4px;
+}
+
