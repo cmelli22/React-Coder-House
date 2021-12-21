@@ -15,10 +15,6 @@ const Item = ({tittle, precio, imagen}) => {
                 <img src={imagen}/>
                 <p>{tittle}</p>
                 <p>$ {precio}</p>
-                <div className="itemCount">
-                    <p>Total : {item}</p>
-                    <ItemCount stock = {5} initial= {1} onAdd={onAdd}/>
-                </div>
             </div>
 
         </> 
