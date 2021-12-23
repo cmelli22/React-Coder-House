@@ -7,9 +7,9 @@ const NavBar = () => {
             <nav className="nav-bar">
                 <div>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><a href="sass.html">Instrumentos</a></li>
-                        <li><a href="badges.html">Clases On Line</a></li>
-                        <li><a href="collapsible.html">Contacto</a></li>
+                        <li><a href="/category/Instrumentos">Instrumentos</a></li>
+                        <li><a href="">Clases On Line</a></li>
+                        <li><a href="">Contacto</a></li>
                         <li><CardWidget/></li>
                     </ul>
                 </div>

@@ -18,7 +18,7 @@ const ItemDetail = ({productoDetail}) =>{
                 <p>{productoDetail.description}</p>
                 <p>$ {productoDetail.price}</p>
                 <div className="itemCount">
-                    <p>Total : {cantidad}</p>
+                    <p>Cantidad : {cantidad}</p>
                     <ItemCount stock = {5} initial= {1} onAdd={onAdd}/>
                 </div>
             </div>

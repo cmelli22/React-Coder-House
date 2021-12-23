@@ -1,7 +1,7 @@
 import { useState } from "react"
-import ItemCount from "./ItemCount"
+import { Link } from "react-router-dom";
 
-const Item = ({tittle, precio, imagen}) => {
+const Item = ({id, tittle, precio, imagen}) => {
 
     let [item, setItem] = useState(0)
 
@@ -15,8 +15,8 @@ const Item = ({tittle, precio, imagen}) => {
                 <img src={imagen}/>
                 <p>{tittle}</p>
                 <p>$ {precio}</p>
+                <Link className="linkDetalle" to={`/item/${id}`}>ver detalle</Link>
             </div>
-
         </> 
     )
     
