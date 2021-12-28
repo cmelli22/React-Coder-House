@@ -1,4 +1,5 @@
 import CardWidget from "./CardWidget"
+import { Link } from "react-router-dom";
 
 const NavBar = () => {    
     return ( 
@@ -7,9 +8,9 @@ const NavBar = () => {
             <nav className="nav-bar">
                 <div>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><a href="/category/Instrumentos">Instrumentos</a></li>
-                        <li><a href="">Clases On Line</a></li>
-                        <li><a href="">Contacto</a></li>
+                        <li><Link to={"/category/1"}>Instrumentos</Link></li>
+                        <li><Link to={"/"}>Clases On Line</Link></li>
+                        <li><Link to={"/"}>Contacto</Link></li>
                         <li><CardWidget/></li>
                     </ul>
                 </div>
