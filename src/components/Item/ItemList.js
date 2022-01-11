@@ -6,7 +6,7 @@ const ItemList = ({items}) => {
         items.map((element, index) => {
 
             return (
-                <Item id={element.id} tittle={element.tittle} precio={element.price} imagen={element.pictureUrl} />
+                <Item id={element.id} tittle={element.tittle} precio={element.price} imagen={element.pictureUrl} isCarrito={false} />
             )
         })
     )
