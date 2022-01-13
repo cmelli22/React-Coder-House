@@ -18,13 +18,11 @@ const Item = ({id, tittle, precio, imagen, isCarrito, cantidad}) => {
                 <img src={imagen}/>
                 <p>{tittle}</p>
                 <p>$ {precio}</p>
+                {isCarrito ? (
+                        <span>Cantidad : {cantidad}</span>) : <></> }
                 <Link className="linkDetalle" to={`/item/${id}`}>ver detalle</Link>
                 {isCarrito ? (
-                    <>
-                        <button onClick={borrarItem}>Borrar</button>
-                        <span>Cantidad Total : {cantidad}</span>
-                    </> )
-                : <></> }
+                        <button onClick={borrarItem}>Borrar</button> ) : <></> }
             </div>
         </> 
     )

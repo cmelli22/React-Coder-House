@@ -31,7 +31,7 @@ const ItemDetail = ({productoDetail}) =>{
                 </div>
                 <Link to={`/cart`}>
                     <button className="button">
-                        <span>Comprar</span>
+                        <span>Terminar mi compra</span>
                     </button>               
                  </Link>
             </div>

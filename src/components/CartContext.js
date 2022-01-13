@@ -12,15 +12,17 @@ export const UseContext = () => {
 const CustomProvider = ({children}) => {
     const [cantidad , setCantidad] = useState(0)    
     const [carrito , setCarrito] = useState([])
+    const [precio_total , setPrecioTotal] = useState(0)
 
 
     const addItem = (item,quantity) =>{
         let copyCarrito = carrito.slice()
         copyCarrito.push(item)
-        item.cantidad = quantity
+        item.cantidad = quantity        
         if(!isInCart(item.id)){
             setCarrito(copyCarrito)
             setCantidad(cantidad+quantity)
+            setPrecioTotal(precio_total+ (item.price*quantity))
         }
 
     }
@@ -33,12 +35,15 @@ const CustomProvider = ({children}) => {
         console.log(copyCarrito)
         setCarrito(copyCarrito)
         setCantidad(cantidad-itemToRemove.cantidad)
-
+        setPrecioTotal(precio_total- (itemToRemove.price*itemToRemove.cantidad))
     }
 
 
     const clear = () =>{
         setCarrito([])
+        setCantidad(0)
+        setPrecioTotal(0)
+
     }
 
     const isInCart= (id) => {
@@ -48,6 +53,7 @@ const CustomProvider = ({children}) => {
     const contextvalue={
         cantidad : cantidad,
         carrito : carrito,
+        precio_total,
         addItem,
         removeItem,
         clear

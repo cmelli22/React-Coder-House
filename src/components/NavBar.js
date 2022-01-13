@@ -1,7 +1,9 @@
 import CardWidget from "./CardWidget"
 import { Link } from "react-router-dom";
+import { UseContext } from "./CartContext";
 
-const NavBar = () => {    
+const NavBar = () => {  
+    const {cantidad} = UseContext()  
     return ( 
             <>
 
@@ -11,7 +13,7 @@ const NavBar = () => {
                         <li><Link to={"/category/1"}>Instrumentos</Link></li>
                         <li><Link to={"/"}>Clases On Line</Link></li>
                         <li><Link to={"/"}>Contacto</Link></li>
-                        <li><CardWidget/></li>
+                        {cantidad > 0? <li><CardWidget/></li>: <></>}                       
                     </ul>
                 </div>
             </nav>

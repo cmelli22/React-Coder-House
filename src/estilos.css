@@ -124,6 +124,51 @@ margin-left: 10px;
  text-decoration: none;
 }
 
+.footerCart{
+    width: 700px; 
+    vertical-align:top; 
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+    color: white;
+}
+.cartContainer{
+    display: inline-block;
+    vertical-align:top; 
+    align-items: center;
+}
+.cartWidget{
+    display: flex;
+    vertical-align: top;
+    align-items: center;
+
+}
+.cartContainer button {
+    background-color: red;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.NotElementCart{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    flex-direction: column;
+    font-weight: bold;    
+}
+
+.NotElementCart button{
+    background-color: blue;
+    margin-top: 10px;
+    width: 300px;
+    border-collapse: collapse;
+    
+}
+.NotElementCart button:hover{
+    cursor:pointer;
+}
 
 
 .item img {
