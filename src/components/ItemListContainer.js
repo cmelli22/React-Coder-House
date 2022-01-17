@@ -1,30 +1,43 @@
 import { useState , useEffect} from "react"
 import ItemCount from "./Item/ItemCount"
 import ItemList from "./Item/ItemList"
+import { db } from "../firebase"
+import { getDocs, query, collection , where } from "firebase/firestore"
+import { useParams } from "react-router-dom"
+
 const ItemListContainer = ({greeting}) => {
     
     let [item, setItem] = useState(0)
     let  [lista, setLista] = useState([])
-    const items = [
-        {id:1, tittle:"Guitarra", price:10000, pictureUrl:"https://static3.depositphotos.com/1000958/128/i/600/depositphotos_1282420-stock-photo-classical-acoustic-guitar.jpg"},
-        {id:2, tittle:"Piano", price:20000, pictureUrl:"http://d3ugyf2ht6aenh.cloudfront.net/stores/078/394/products/3hd31-b13fb807f26f73a5de15725640161460-640-0.jpg"},
-        {id:3, tittle:"Bateria", price:80000, pictureUrl:"https://mla-s1-p.mlstatic.com/997402-MLA42824421450_072020-F.jpg"}
-    ]
-
+    const {id} = useParams()
+    console.log(id)
     useEffect(() => {
-        const promesa = new Promise((res,rej)=>{
-            setTimeout(() => {
-              res(items)  
-            }, 2000);
-        })
 
-        promesa.then((respuesta) =>{
-            setLista(respuesta)
-        })
-        .catch(()=>{
-            console.log("no hay productos")
-        })
-    }, [])
+        const productosCollection = collection(db, "productos")
+
+        if(id){
+            const consulta = query(productosCollection,where("category","==",id))
+
+            getDocs(consulta)
+                .then(({ docs }) => {
+                    setLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+
+        }
+        else{
+            getDocs(productosCollection)
+            .then(({ docs }) => {
+                setLista(docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        }
+
+    }, [id])
 
 
 
