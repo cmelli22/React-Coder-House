@@ -17,9 +17,18 @@ const CustomProvider = ({children}) => {
 
     const addItem = (item,quantity) =>{
         let copyCarrito = carrito.slice()
-        copyCarrito.push(item)
-        item.cantidad = quantity        
         if(!isInCart(item.id)){
+            item.cantidad = quantity        
+            copyCarrito.push(item)
+            setCarrito(copyCarrito)
+            setCantidad(cantidad+quantity)
+            setPrecioTotal(precio_total+ (item.price*quantity))
+        }
+        else{
+            console.log("entre a repetido")
+            let i = copyCarrito.filter(i => i.id === Number(item.id))
+            i[0].cantidad = i[0].cantidad + quantity
+            console.log(copyCarrito)
             setCarrito(copyCarrito)
             setCantidad(cantidad+quantity)
             setPrecioTotal(precio_total+ (item.price*quantity))

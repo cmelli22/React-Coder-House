@@ -8,8 +8,6 @@ const Cart = () => {
     const borrarItem = (e) => {
         removeItem(e.target.id)
     } 
-    console.log("soy carrito");
-    console.log(carrito[0])
     return(
         
         <div className="cartContainer"> 
