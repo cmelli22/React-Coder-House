@@ -1,5 +1,5 @@
 body {
-    background-color:gray;
+    background-color:rgba(231, 230, 230, 0.89);
 }
 
 .nav-bar{
@@ -21,6 +21,26 @@ body {
     margin-top: 4px;
 }
 
+.domicilio{
+    display: flex;
+
+}
+
+.dni{
+    display: flex;
+}
+.calle{
+    width: 80%;
+}
+.typeDni{
+    width: 30%;
+}
+
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 /* .button:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
@@ -130,8 +150,9 @@ margin-left: 10px;
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
-    font-size: large;
-    color: white;
+    font-size: xx-large;
+    color: black;
+    align-items: center;
 }
 .cartContainer{
     display: inline-block;
@@ -145,9 +166,7 @@ margin-left: 10px;
 
 }
 .cartContainer button {
-    background-color: red;
     color: white;
-    font-size: large;
     font-weight: bold;
 }
 

@@ -57,7 +57,6 @@ const CustomProvider = ({children}) => {
     }
 
     const isInCart= (id) => {
-        console.log(id)
         return carrito.some((element) => element.id === id )
     }
 

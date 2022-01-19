@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Footer from "./components/Footer"
 import Cart from "./components/Cart/Cart"
 import CustomProvider, { UseContext } from "./components/CartContext"
-
+import Formulario from "./components/Formulario"
 
 const mensaje = "Tienda Musical"
  
@@ -22,6 +22,7 @@ const App = () => {
                         <Route path="/" element={<ItemListContainer greeting={mensaje}/>}/>
                         <Route path="/category/:id" element={<ItemListContainer greeting={mensaje}/>}/>
                         <Route path="/cart" element={<Cart/>}/>
+                        <Route path="/checkout" element={<Formulario/>}/>
                         <Route path="/item/:id" element={<ItemDetailContainer/>}/>
                     </Routes>
                 </main>

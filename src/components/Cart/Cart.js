@@ -1,6 +1,7 @@
 import { UseContext } from "../CartContext"
 import Item from "../Item/Item"
 import { Link } from "react-router-dom"
+import { Button } from "@mui/material"
 const Cart = () => {
 
     const {carrito, removeItem, clear, precio_total , cantidad} = UseContext()
@@ -26,10 +27,16 @@ const Cart = () => {
                             )
                         })}
                     </div>
-                    <div className="footerCart">
-                        <button onClick={clear}>Vaciar Carrito</button>
+                    <div className="footerCart">                
+                        <Button variant="contained" onClick={clear} >Vaciar Carrito</Button>
                         <span>Total: ${precio_total}</span>
-                    </div> 
+                        <Link to={"/checkout"}>
+                            <Button variant="contained" >Siguiente</Button>
+                        </Link> 
+                    </div>
+                    <div>
+
+                    </div>
                     </> 
                 )}
          </div>

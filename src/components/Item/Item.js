@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
 import { UseContext } from "../CartContext"
+import { Button } from "@mui/material";
 
 const Item = ({id, tittle, precio, imagen, isCarrito, cantidad}) => {
 
@@ -22,7 +23,8 @@ const Item = ({id, tittle, precio, imagen, isCarrito, cantidad}) => {
                         <span>Cantidad : {cantidad}</span>) : <></> }
                 <Link className="linkDetalle" to={`/item/${id}`}>ver detalle</Link>
                 {isCarrito ? (
-                        <button onClick={borrarItem}>Borrar</button> ) : <></> }
+                        <Button variant="contained" color="error" onClick={borrarItem} >Borrar</Button>
+                        ) : <></> }
             </div>
         </> 
     )
