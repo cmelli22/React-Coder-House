@@ -40,7 +40,7 @@ Encargado de renderizar el carrito
 
 2. CATEGORIA INSTRUMENTOS
 
-![screen 2](public/img/ScreenShoot2.PNG)
+![screen 2](public/img/ScreenShoot2.png)
 
 3. VER DETALLE
 
