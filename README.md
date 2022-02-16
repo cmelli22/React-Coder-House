@@ -52,7 +52,7 @@ Encargado de renderizar el carrito
 
 5. IR AL CARRITO O TERMINAR MI COMPRA
 
-![screen 1](public/img/ScreenShootIdCompra.PNG)
+![screen 1](public/img/ScreenShootCarrito.PNG)
 
 6. FORMULARIO
 
