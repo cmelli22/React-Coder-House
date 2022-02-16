@@ -19,7 +19,7 @@
 * react-router-dom
 * mui/material
 
-## Componentes
+## Componentes principales
 
 ### Firebase.js
 Administra credenciales y configuracion para la conexion con firabase
@@ -34,4 +34,33 @@ Encargado de renderizar el carrito
 
 # NAVEGACION POR EL SITIO 
 
-![image] (../public/logo192.png)
+1. HOME
+
+![screen 1](public/img/ScreenShot1.PNG)
+
+2. CATEGORIA INSTRUMENTOS
+
+![screen 2](public/img/ScreenShoot2.PNG)
+
+3. VER DETALLE
+
+![screen 1](public/img/ScreenShootDetalle.PNG)
+
+4. AGREGAR AL CARRITO 
+
+![screen 1](public/img/ScreenShootCarritoAparece.PNG)
+
+5. IR AL CARRITO O TERMINAR MI COMPRA
+
+![screen 1](public/img/ScreenShootIdCompra.PNG)
+
+6. FORMULARIO
+
+![screen 1](public/img/ScreenShootFormulario.PNG)
+
+7. COMPRA REALIZADA
+
+![screen 1](public/img/ScreenShootDetalle.PNG)
+
+
+
