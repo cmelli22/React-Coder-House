@@ -60,7 +60,7 @@ Encargado de renderizar el carrito
 
 7. COMPRA REALIZADA
 
-![screen 1](public/img/ScreenShootDetalle.PNG)
+![screen 1](public/img/ScreenShootIdCompra.PNG)
 
 
 
